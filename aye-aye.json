@@ -1,0 +1,273 @@
+{
+	"swagger": "2.0",
+	"basePath": "/_db/virtualSensorsDB/tarefas",
+	"paths": {
+		"/ayeaye/todos": {
+			"get": {
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"tags": [],
+				"consumes": [],
+				"responses": {
+					"500": {
+						"description": "Default error response.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"error": {
+									"enum": [
+										true
+									],
+									"type": [
+										"array",
+										"boolean",
+										"number",
+										"object",
+										"string",
+										"null"
+									]
+								},
+								"errorNum": {
+									"type": "integer"
+								},
+								"errorMessage": {
+									"type": "string"
+								},
+								"code": {
+									"type": "integer"
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"error"
+							]
+						}
+					}
+				}
+			},
+			"post": {
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"required": false,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"_key": {
+									"type": "string"
+								},
+								"_id": {
+									"type": "string"
+								},
+								"_rev": {
+									"type": "string"
+								},
+								"completed": {
+									"type": "boolean"
+								},
+								"order": {
+									"type": "number"
+								},
+								"title": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						},
+						"name": "body",
+						"in": "body"
+					}
+				],
+				"tags": [],
+				"consumes": [
+					"application/json"
+				],
+				"responses": {
+					"500": {
+						"description": "Default error response.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"error": {
+									"enum": [
+										true
+									],
+									"type": [
+										"array",
+										"boolean",
+										"number",
+										"object",
+										"string",
+										"null"
+									]
+								},
+								"errorNum": {
+									"type": "integer"
+								},
+								"errorMessage": {
+									"type": "string"
+								},
+								"code": {
+									"type": "integer"
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"error"
+							]
+						}
+					}
+				}
+			}
+		},
+		"/ayeaye/todos/{id}": {
+			"put": {
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"required": true,
+						"description": "The id of the Todo-Item",
+						"type": "string",
+						"name": "id",
+						"in": "path"
+					},
+					{
+						"required": false,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"_key": {
+									"type": "string"
+								},
+								"_id": {
+									"type": "string"
+								},
+								"_rev": {
+									"type": "string"
+								},
+								"completed": {
+									"type": "boolean"
+								},
+								"order": {
+									"type": "number"
+								},
+								"title": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						},
+						"name": "body",
+						"in": "body"
+					}
+				],
+				"tags": [],
+				"consumes": [
+					"application/json"
+				],
+				"responses": {
+					"500": {
+						"description": "Default error response.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"error": {
+									"enum": [
+										true
+									],
+									"type": [
+										"array",
+										"boolean",
+										"number",
+										"object",
+										"string",
+										"null"
+									]
+								},
+								"errorNum": {
+									"type": "integer"
+								},
+								"errorMessage": {
+									"type": "string"
+								},
+								"code": {
+									"type": "integer"
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"error"
+							]
+						}
+					}
+				}
+			},
+			"delete": {
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"required": true,
+						"description": "The id of the Todo-Item",
+						"type": "string",
+						"name": "id",
+						"in": "path"
+					}
+				],
+				"tags": [],
+				"consumes": [],
+				"responses": {
+					"500": {
+						"description": "Default error response.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"error": {
+									"enum": [
+										true
+									],
+									"type": [
+										"array",
+										"boolean",
+										"number",
+										"object",
+										"string",
+										"null"
+									]
+								},
+								"errorNum": {
+									"type": "integer"
+								},
+								"errorMessage": {
+									"type": "string"
+								},
+								"code": {
+									"type": "integer"
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"error"
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"info": {
+		"title": "aye-aye",
+		"description": "A ToDo-List Application.",
+		"version": "1.4.0",
+		"license": {
+			"name": "Apache 2 License"
+		}
+	}
+}
